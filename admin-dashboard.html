@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Administración</h1>
+        <button id="logout">Cerrar sesión</button>
+    </header>
+    <main>
+        <h2>Gestión de Productos</h2>
+        <!-- Aquí puedes agregar opciones para agregar, editar o eliminar productos -->
+    </main>
+    <script>
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'login.html'; // Redirigir a la página de inicio de sesión
+        });
+    </script>
+</body>
+</html>

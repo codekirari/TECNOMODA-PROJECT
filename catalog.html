@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+
+    <!-- Vincular iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Vincular archivo de estilos CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Vincular archivo de JavaScript -->
+    <script src="js/catalog.js" defer></script>
+</head>
+<body>
+
+<!-- Sección de encabezado -->
+<header class="header">
+    <a href="index.html" class="logo"> LOGO </a>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalog.html">Catálogo</a></li>
+            <li><a href="sellers.html">Proveedores</a></li>
+            <li><a href="about.html">¿Quiénes somos?</a></li>
+            <li><a href="contact.html">Contáctanos</a></li>
+            <li><a href="#">Cuenta</a>
+                <ul>
+                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li><a href="register.html">Registro</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="Buscar aquí..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
+
+<!-- Sección de encabezado del catálogo -->
+<section class="heading">
+    <h1>Nuestro catálogo</h1>
+    <p> <a href="index.html">Inicio</a> >> Catálogo </p>
+</section>
+
+<!-- Sección de catálogos destacados -->
+<section class="catalog">
+    <h1 class="title"> Productos destacados </h1>
+
+    <!-- Filtros de categoría y proveedor -->
+    <div class="filters">
+        <h3>Filtrar por categoría:</h3>
+        <select id="category-filter">
+            <option value="all">Todos</option>
+            <option value="chaquetas">Chaquetas</option>
+            <option value="jeans">Jeans</option>
+            <option value="camisa-polo">Camisas tipo Polo</option>
+            <option value="tennis">Tennis</option>
+        </select>
+
+        <h3>Filtrar por proveedor:</h3>
+        <select id="supplier-filter">
+            <option value="all">Todos</option>
+            <option value="tienda1">Tienda 1</option>
+            <option value="tienda2">Tienda 2</option>
+            <option value="tienda3">Tienda 3</option>
+            <option value="tienda4">Tienda 4</option>
+        </select>
+    </div>
+
+    <!-- Contenedor de los productos -->
+    <div class="box-container">
+        <div class="box" data-category="chaquetas" data-supplier="tienda1">
+            <div class="image">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="images/chaquetas/chaqueta2.jpg" alt="Chaqueta">
+            </div>
+            <div class="content">
+                <h3>Chaqueta</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$80.000 <span>$25.00</span></div>
+            </div>
+        </div>
+
+        <div class="box" data-category="jeans" data-supplier="tienda2">
+            <div class="image">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="images/jeans/jean1.jpg" alt="Jeans">
+            </div>
+            <div class="content">
+                <h3>Jeans</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">$50.000 <span>$15.00</span></div>
+            </div>
+        </div>
+
+        <div class="box" data-category="camisa-polo" data-supplier="tienda3">
+            <div class="image">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="images/polo/polo3.jpg" alt="Camisa Polo">
+            </div>
+            <div class="content">
+                <h3>Camisa Polo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$40.000 <span>$12.00</span></div>
+            </div>
+        </div>
+
+        <div class="box" data-category="tennis" data-supplier="tienda4">
+            <div class="image">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="images/tennis/tennis1.jpg" alt="Tennis">
+            </div>
+            <div class="content">
+                <h3>Tennis</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">$60.000 <span>$20.00</span></div>
+            </div>
+        </div>
+
+        <!-- Agregar más productos según necesidad -->
+    </div>
+</section>
+
+<!-- Sección de pie de página -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Enlaces</h3>
+            <a href="home.html"> <i class="fas fa-angle-right"></i> Inicio</a>
+            <a href="catalog.html"> <i class="fas fa-angle-right"></i> Catálogo</a>
+            <a href="about.html"> <i class="fas fa-angle-right"></i> Quiénes somos</a>
+            <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
+            <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
+            <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
+        </div>
+
+        <div class="box">
+            <h3>Enlaces adicionales</h3>
+            <a href="#"> <i class="fas fa-angle-right"></i> Mi cuenta</a>
+            <a href="#"> <i class="fas fa-angle-right"></i> Mi orden</a>
+            <a href="#"> <i class="fas fa-angle-right"></i> Lista de deseos</a>
+            <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso</a>
+            <a href="#"> <i class="fas fa-angle-right"></i> Política de privacidad</a>
+        </div>
+
+        <div class="box">
+            <h3>Síguenos</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> Facebook</a>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>Suscríbete para recibir información</p>
+            <form action="">
+                <input type="email" placeholder="Ingresa tu correo electrónico">
+                <input type="submit" value="Suscribirse" class="btn">
+            </form>
+        </div>
+    </div>
+
+    <div class="credit"> Sena Proyecto <span>2024</span> | TECNOMODA </div>
+</section>
+
+<script src="js/header.js"></script>
+
+</body>
+</html>
