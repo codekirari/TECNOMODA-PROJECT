@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Usuario</h1>
+        <button id="logout">Cerrar sesión</button>
+    </header>
+    <main>
+        <h2>Mis Pedidos</h2>
+        <div id="userSection">
+            <!-- Contenido exclusivo para usuarios -->
+            <p>Aquí puedes ver el estado de tus pedidos.</p>
+            <!-- Más opciones y funcionalidades para usuarios -->
+        </div>
+        <div id="commonSection">
+            <!-- Contenido común a todos los usuarios -->
+            <h3>Información General</h3>
+            <p>Aquí encontrarás información útil.</p>
+        </div>
+    </main>
+    <script>
+        // Comprobar si el usuario está autenticado como usuario
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!loggedInUser || loggedInUser.userType !== 'user') {
+            window.location.href = 'login.html';
+        }
+
+        // Si es usuario, no ocultar nada en la sección del usuario
+    </script>
+</body>
+</html>
