@@ -11,6 +11,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
 
     <!-- custom js file link  -->
     <script src="js/script.js" defer></script>
@@ -65,108 +66,67 @@
 <!-- header section -->
 
 <!-- cart section starts  -->
-
 <section class="shopping-cart">
-
     <h1 class="title"> your products </h1>
-
     <div class="box-container">
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/chaquetas/chaqueta1.jpg" alt="">
-            <div class="content">
-                <h3>Chaqueta negra antibacterial</h3>
-                <form action="">
-                    <span>Cantidad:</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price">$80.000<span>$25.00</span> </div>
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <div id="items" class="col-sm-8 row"></div>
+            <!-- Carrito -->
+            <div class="col-sm-5">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span> COP</p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
             </div>
         </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/chaquetas/chaqueta1.jpg" alt="">
-            <div class="content">
-                <h3>Chaqueta negra antibacterial</h3>
-                <form action="">
-                    <span>Cantidad:</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price">$80.000<span>$25.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/chaquetas/chaqueta1.jpg" alt="">
-            <div class="content">
-                <h3>Chaqueta negra antibacterial</h3>
-                <form action="">
-                    <span>Cantidad:</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price">$80.000<span>$25.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/chaquetas/chaqueta1.jpg" alt="">
-            <div class="content">
-                <h3>Chaqueta negra antibacterial</h3>
-                <form action="">
-                    <span>Cantidad:</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price">$80.000<span>$25.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/chaquetas/chaqueta1.jpg" alt="">
-            <div class="content">
-                <h3>Chaqueta negra antibacterial</h3>
-                <form action="">
-                    <span>Cantidad:</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price">$80.000<span>$25.00</span> </div>
-            </div>
-        </div>
-
     </div>
-
-    <h1 class="title">checkout</h1>
-
-    <div class="cart-total">
-        <h3>subtotal : <span>$100.00</span></h3>
-        <h3>total : <span>$100.00</span></h3>
-        <a href="#" class="btn">proceed to checkout</a>
-    </div>
-
 </section>
 
 <!-- cart section end -->
+    <!-- footer section starts  -->
 
+    <section class="footer">
 
+        <div class="box-container">
 
-<!-- footer section starts  -->
+            <div class="box">
+                <h3>links</h3>
+                <a href="home.html"> <i class="fas fa-angle-right"></i> Inicio</a>
+                <a href="catalog.html"> <i class="fas fa-angle-right"></i> Catálogo</a>
+                <a href="about.html"> <i class="fas fa-angle-right"></i> quiénes somos</a>
+                <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
+                <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
+                <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
+            </div>
 
-<section class="footer">
+            <div class="box">
+                <h3>links adicionales</h3>
+                <a href="#"> <i class="fas fa-angle-right"></i> Mi cuenta</a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Mi orden </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Lista de deseos </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Política de provacidad </a>
+            </div>
 
-    <div class="box-container">
+    
 
-        <div class="box">
-            <h3>links</h3>
-            <a href="index.html"> <i class="fas fa-angle-right"></i> Inicio</a>
-            <a href="catalog.html"> <i class="fas fa-angle-right"></i> Catálogo</a>
-            <a href="about.html"> <i class="fas fa-angle-right"></i> quiénes somos</a>
-            <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
-            <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
-            <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
+            <div class="box">
+                <h3>Síguenos</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>Suscribete para recibir información</p>
+                <form action="">
+                    <input type="email" placeholder="ingresa tu correo electrónico">
+                    <input type="submit" value="Suscribete" class="btn">
+                </form>
+            </div>
+
         </div>
 
         <div class="box">
@@ -222,6 +182,7 @@
     </script>
     
     <script src="js/header.js"></script>
+    <script src="js/cart.js" defer></script>
 
 
 </body>
