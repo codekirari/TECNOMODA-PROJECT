@@ -13,13 +13,25 @@
     </header>
     <main>
         <h2>Gestión de Productos</h2>
-        <!-- Aquí puedes agregar opciones para agregar, editar o eliminar productos -->
+        <div id="adminSection">
+            <!-- Contenido exclusivo para administradores -->
+            <p>Aquí puedes agregar, editar o eliminar productos.</p>
+            <!-- Más opciones y funcionalidades para admin -->
+        </div>
+        <div id="commonSection">
+            <!-- Contenido común a todos los usuarios -->
+            <h3>Información General</h3>
+            <p>Aquí encontrarás información útil.</p>
+        </div>
     </main>
     <script>
-        document.getElementById('logout').addEventListener('click', function() {
-            localStorage.removeItem('loggedInUser');
-            window.location.href = 'login.html'; // Redirigir a la página de inicio de sesión
-        });
+        // Comprobar si el usuario está autenticado como administrador
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!loggedInUser || loggedInUser.userType !== 'admin') {
+            window.location.href = 'login.html';
+        }
+        
+        // Si es admin, no ocultar nada en la sección del admin
     </script>
 </body>
 </html>
