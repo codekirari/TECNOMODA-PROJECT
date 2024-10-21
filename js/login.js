@@ -2,7 +2,7 @@
 const loginForm = document.getElementById('loginForm');
 
 // Escuchar el evento de envío del formulario
-loginForm.addEventListener('submit', function(event) {
+loginForm.addEventListener('submit', function (event) {
     event.preventDefault(); // Evitar que el formulario se recargue
 
     // Obtener los valores del formulario
@@ -37,8 +37,21 @@ loginForm.addEventListener('submit', function(event) {
         // Guardar información del usuario en localStorage
         localStorage.setItem('loggedInUser', JSON.stringify(authenticatedUser));
 
-        // Redirigir a la página de inicio
-        window.location.href = 'index.html';
+        // Redirigir según el tipo de usuario
+        switch (authenticatedUser.userType) {
+            case 'user':
+                window.location.href = 'user-profile.html'; // Redirigir a perfil de usuario
+                break;
+            case 'seller':
+                window.location.href = 'seller-profile.html'; // Redirigir a perfil de vendedor
+                break;
+            case 'admin':
+                window.location.href = 'admin-profile.html'; // Redirigir a perfil de administrador
+                break;
+            default:
+                alert('Tipo de usuario no reconocido.');
+        }
+
     } else {
         alert('Credenciales incorrectas. Por favor, verifica tu correo, contraseña y tipo de usuario.');
     }

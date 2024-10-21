@@ -948,3 +948,83 @@ section {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* Contenedor para las secciones de la cuenta */
+.account-section
+.user-profile-section {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  border: 2px solid #1B4D54;
+  border-radius: .5rem;
+  background-color: #fff;
+}
+
+/* Títulos para secciones dentro de la cuenta */
+.account-section
+.user-profile-section h2 {
+  font-size: 2.5rem;
+  color: #1B4D54;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.account-section 
+.user-profile-sectionp {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo para listas de configuraciones */
+.account-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-section ul li {
+  padding: 1rem 0;
+  font-size: 1.7rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.account-section ul li a {
+  color: #1B4D54;
+  text-decoration: none;
+}
+
+.account-section ul li a:hover {
+  color: #D95E2B;
+}
+/* Botones para la página de cuenta */
+.btn-account {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: #1B4D54;
+  border: 2px solid #1B4D54;
+  border-radius: .5rem;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-account:hover {
+  background-color: #1B4D54;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #D95E2B;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #F6A05D;
+}

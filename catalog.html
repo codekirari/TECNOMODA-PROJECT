@@ -29,9 +29,11 @@
             <li><a href="about.html">¿Quiénes somos?</a></li>
             <li><a href="contact.html">Contáctanos</a></li>
             <li><a href="#">Cuenta</a>
-                <ul>
-                    <li><a href="login.html">Iniciar sesión</a></li>
+                <ul id="user-account-menu">
+                    <li><a href="login.html" id="login-link">Iniciar sesión</a></li>
                     <li><a href="register.html">Registro</a></li>
+                    <li><a href="#" id="logout" style="display: none;">Cerrar sesión</a></li>
+                    <li><a href="#" id="my-account-link" style="display: none;">Mi Cuenta</a></li>
                 </ul>
             </li>
         </ul>
@@ -174,54 +176,61 @@
     </div>
 </section>
 
-<!-- footer section starts  -->
-
+<!-- footer section starts -->
 <section class="footer">
-
     <div class="box-container">
-
         <div class="box">
             <h3>links</h3>
             <a href="index.html"> <i class="fas fa-angle-right"></i> Inicio</a>
             <a href="catalog.html"> <i class="fas fa-angle-right"></i> Catálogo</a>
-            <a href="about.html"> <i class="fas fa-angle-right"></i> quiénes somos</a>
+            <a href="about.html"> <i class="fas fa-angle-right"></i> ¿Quiénes somos?</a>
             <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
-            <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
-            <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
         </div>
-
         <div class="box">
             <h3>links adicionales</h3>
-            <a href="#"> <i class="fas fa-angle-right"></i> Mi cuenta</a>
             <a href="#"> <i class="fas fa-angle-right"></i> Mi orden </a>
             <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso </a>
-            <a href="#"> <i class="fas fa-angle-right"></i> Política de provacidad </a>
+            <a href="#"> <i class="fas fa-angle-right"></i> Política de privacidad </a>
         </div>
-
-
-
         <div class="box">
-            <h3>Síguenos</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <h3>contacto</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +57 123 456 789 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +57 987 654 321 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> ejemplo@gmail.com </a>
+            <a href="#"> <i class="fas fa-map"></i> Bogotá, Colombia </a>
         </div>
-
-        <div class="box">
-            <h3>newsletter</h3>
-            <p>Suscribete para recibir información</p>
-            <form action="">
-                <input type="email" placeholder="ingresa tu correo electrónico">
-                <input type="submit" value="Suscribete" class="btn">
-            </form>
-        </div>
-
     </div>
-
-    <div class="credit"> Sena Proyecto <span>2024</span> | TECNOMODA </div>
-
+    <div class="credit"> © 2024 - Todos los derechos reservados. </div>
 </section>
-
 <!-- footer section ends -->
-<script src="js/header.js"></script>
 
+<!-- Aquí se coloca el JavaScript -->
+<script>
+    // Simulación de usuario conectado, cambiar a true si el usuario está conectado
+    const isLoggedIn = true; // Cambiar esto según la lógica de autenticación
+
+    // Obtener los enlaces del menú
+    const loginLink = document.getElementById('login-link');
+    const logoutLink = document.getElementById('logout');
+    const myAccountLink = document.getElementById('my-account-link');
+
+    // Actualizar la interfaz según el estado de inicio de sesión
+    if (isLoggedIn) {
+        loginLink.style.display = 'none'; // Ocultar el enlace de iniciar sesión
+        logoutLink.style.display = 'block'; // Mostrar el enlace de cerrar sesión
+        myAccountLink.style.display = 'block'; // Mostrar el enlace de mi cuenta
+    } else {
+        logoutLink.style.display = 'none'; // Ocultar el enlace de cerrar sesión
+        myAccountLink.style.display = 'none'; // Ocultar el enlace de mi cuenta
+    }
+
+    // Lógica para cerrar sesión (simulada)
+    logoutLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        alert('Has cerrado sesión.');
+        // Aquí puedes agregar lógica adicional para manejar la sesión
+        window.location.href = 'index.html'; // Redirigir a la página de inicio
+    });
+</script>
 </body>
 </html>
