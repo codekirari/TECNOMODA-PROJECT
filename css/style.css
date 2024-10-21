@@ -241,7 +241,7 @@ section {
 }
 
 .home .slide .content span {
-  color: #333;
+  color: #D95E2B;
   display: block;
   font-size: 2rem;
   -webkit-animation: fadeIn .4s linear .2s backwards;
@@ -249,7 +249,7 @@ section {
 }
 
 .home .slide .content h3 {
-  color: #333;
+  color: #e2dede;
   text-transform: uppercase;
   padding: 1rem 0;
   font-size: 6rem;
@@ -271,7 +271,7 @@ section {
   width: 6rem;
   line-height: 5.5rem;
   font-size: 4rem;
-  color: #333;
+  color: #D95E2B;
   border: 0.2rem solid #333;
   background: #fff;
   border-radius: .5rem;
@@ -281,7 +281,7 @@ section {
 
 .home #next-slide:hover,
 .home #prev-slide:hover {
-  background: #333;
+  background: #D95E2B;
   color: #fff;
 }
 
@@ -326,12 +326,12 @@ section {
 
 .banner .box .content span {
   font-size: 1.5rem;
-  color: #333;
+  color: #D95E2B;
 }
 
 .banner .box .content h3 {
   font-size: 2rem;
-  color: #333;
+  color: #1B4D54;
   padding-top: 1rem;
 }
 
