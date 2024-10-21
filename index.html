@@ -9,10 +9,10 @@
 
     <!-- Font Awesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
     <!-- Custom CSS File Link -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Custom JS File Link -->
     <script src="js/script.js" defer></script>
 </head>
@@ -35,6 +35,7 @@
                         <li><a href="login.html" id="login-link">Iniciar sesión</a></li>
                         <li><a href="register.html">Registro</a></li>
                         <li><a href="#" id="logout" style="display: none;">Cerrar sesión</a></li>
+                        <li><a href="#" id="my-account-link" style="display: none;">Mi Cuenta</a></li> <!-- Aquí se añade la opción Mi Cuenta -->
                     </ul>
                 </li>
             </ul>
@@ -79,97 +80,104 @@
         <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>
         <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
     </section>
-<!-- Home Section Ends -->
+    <!-- Home Section Ends -->
 
-
-<!-- banner section starts  -->
-
-<section class="banner">
-
-    <div class="box">
-        <img src="images/chaquetas/chaqueta.jpg" alt="">
-        <div class="content">
-            <span>Chaquetas</span>
-            <h3>Disponibilidad inmediata</h3>
-            <a href="#" class="btn">Compra ahora</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <img src="images/jeans/jean.jpeg" alt="">
-        <div class="content">
-            <span>Jeans</span>
-            <h3>Disponibilidad inmediata</h3>
-            <a href="#" class="btn">Compra ahora</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <img src="images/polo/polo.jpg" alt="">
-        <div class="content">
-            <span>Camisas tipo polo</span>
-            <h3>Disponibilidad inmediata</h3>
-            <a href="#" class="btn">Compra ahora</a>
-        </div>
-    </div>
-
-</section>
-
-<!-- banner section ends -->
-
-
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="box-container">
-
+    <!-- Banner Section Starts -->
+    <section class="banner">
         <div class="box">
-            <h3>links</h3>
-            <a href="index.html"> <i class="fas fa-angle-right"></i> Inicio</a>
-            <a href="catalog.html"> <i class="fas fa-angle-right"></i> Catálogo</a>
-            <a href="about.html"> <i class="fas fa-angle-right"></i> quiénes somos</a>
-            <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
-            <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
-            <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
+            <img src="images/chaquetas/chaqueta.jpg" alt="">
+            <div class="content">
+                <span>Chaquetas</span>
+                <h3>Disponibilidad inmediata</h3>
+                <a href="#" class="btn">Compra ahora</a>
+            </div>
         </div>
 
         <div class="box">
-            <h3>links adicionales</h3>
-            <a href="#"> <i class="fas fa-angle-right"></i> Mi cuenta</a>
-            <a href="#"> <i class="fas fa-angle-right"></i> Mi orden </a>
-            <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso </a>
-            <a href="#"> <i class="fas fa-angle-right"></i> Política de provacidad </a>
-        </div>
-
-
-
-        <div class="box">
-            <h3>Síguenos</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <img src="images/jeans/jean.jpeg" alt="">
+            <div class="content">
+                <span>Jeans</span>
+                <h3>Disponibilidad inmediata</h3>
+                <a href="#" class="btn">Compra ahora</a>
+            </div>
         </div>
 
         <div class="box">
-            <h3>newsletter</h3>
-            <p>Suscribete para recibir información</p>
-            <form action="">
-                <input type="email" placeholder="ingresa tu correo electrónico">
-                <input type="submit" value="Suscribete" class="btn">
-            </form>
+            <img src="images/polo/polo.jpg" alt="">
+            <div class="content">
+                <span>Camisas tipo polo</span>
+                <h3>Disponibilidad inmediata</h3>
+                <a href="#" class="btn">Compra ahora</a>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>links</h3>
+                <a href="index.html"> <i class="fas fa-angle-right"></i> Inicio</a>
+                <a href="catalog.html"> <i class="fas fa-angle-right"></i> Catálogo</a>
+                <a href="about.html"> <i class="fas fa-angle-right"></i> ¿Quiénes somos?</a>
+                <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
+                <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
+                <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
+            </div>
+
+            <div class="box">
+                <h3>links adicionales</h3>
+                <a href="#" id="my-account-link-footer"> <i class="fas fa-angle-right"></i> Mi cuenta</a> <!-- Cambiar a la lógica en JS -->
+                <a href="#"> <i class="fas fa-angle-right"></i> Mi orden </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Política de privacidad </a>
+            </div>
+
+            <div class="box">
+                <h3>Síguenos</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>Suscríbete para recibir información</p>
+                <form action="">
+                    <input type="email" placeholder="Ingresa tu correo electrónico">
+                    <input type="submit" value="Suscríbete" class="btn">
+                </form>
+            </div>
         </div>
 
-    </div>
+        <div class="credit">Sena Proyecto <span>2024</span> | TECNOMODA </div>
+    </section>
+    <!-- Footer Section Ends -->
 
-    <div class="credit"> Sena Proyecto <span>2024</span> | TECNOMODA </div>
+    <script>
+        // Comprobar si el usuario está autenticado
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        
+        // Manejo del menú de cuenta
+        const loginLink = document.getElementById('login-link');
+        const logoutLink = document.getElementById('logout');
+        const myAccountLink = document.getElementById('my-account-link');
 
-</section>
+        // Mostrar o esconder los enlaces de sesión
+        if (loggedInUser) {
+            loginLink.style.display = 'none'; // Ocultar enlace de iniciar sesión
+            logoutLink.style.display = 'block'; // Mostrar enlace de cerrar sesión
+            myAccountLink.style.display = 'block'; // Mostrar enlace de Mi Cuenta
 
-<!-- footer section ends -->
+            // Cambiar el enlace de "Mi Cuenta" basado en el tipo de usuario
+            myAccountLink.setAttribute('href', `${loggedInUser.userType}-profile.html`); // Redirige a perfil de usuario
+        }
 
-<script src="js/header.js"></script>
-
-
+        // Función para cerrar sesión
+        logoutLink.addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser'); // Limpiar sesión
+            window.location.href = 'index.html'; // Redirigir a la página de inicio
+        });
+    </script>
 </body>
 
 </html>
