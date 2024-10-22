@@ -19,39 +19,23 @@ loginForm.addEventListener('submit', function (event) {
     // Obtener usuarios almacenados en localStorage
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    console.log('Usuarios en localStorage:', users); // Verificar qué usuarios están almacenados
-
     // Buscar un usuario que coincida con el email, contraseña y tipo de usuario
-    const authenticatedUser = users.find(user => {
-        console.log('Comparando:', user.email, email, user.password, password, user.userType, userType); // Depuración
-        return user.email === email && user.password === password && user.userType === userType;
-    });
+    const authenticatedUser = users.find(user => 
+        user.email === email && user.password === password && user.userType === userType
+    );
 
     if (authenticatedUser) {
         alert(`¡Bienvenido, ${authenticatedUser.username}!`);
 
         // Guardar un token en localStorage para mantener la sesión activa
-        const userToken = generateToken(); // Generar un token
+        const userToken = generateToken();
         localStorage.setItem('userToken', userToken);
 
         // Guardar información del usuario en localStorage
         localStorage.setItem('loggedInUser', JSON.stringify(authenticatedUser));
 
-        // Redirigir según el tipo de usuario
-        switch (authenticatedUser.userType) {
-            case 'user':
-                window.location.href = 'user-profile.html'; // Redirigir a perfil de usuario
-                break;
-            case 'seller':
-                window.location.href = 'seller-profile.html'; // Redirigir a perfil de vendedor
-                break;
-            case 'admin':
-                window.location.href = 'admin-profile.html'; // Redirigir a perfil de administrador
-                break;
-            default:
-                alert('Tipo de usuario no reconocido.');
-        }
-
+        // Redirigir a profile.html (todos los usuarios van a la misma página)
+        window.location.href = 'profile.html';  // Cambiado a "profile.html"
     } else {
         alert('Credenciales incorrectas. Por favor, verifica tu correo, contraseña y tipo de usuario.');
     }
@@ -59,5 +43,5 @@ loginForm.addEventListener('submit', function (event) {
 
 // Función para generar un token de usuario (puedes adaptarla según tus necesidades)
 function generateToken() {
-    return 'token-' + Math.random().toString(36).substr(2); // Generar un token aleatorio simple
+    return 'token-' + Math.random().toString(36).substr(2);
 }

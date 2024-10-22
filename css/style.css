@@ -61,8 +61,8 @@ section {
   margin-top: 1rem;
   padding: .8rem 2.8rem;
   font-size: 1.7rem;
-  color: #1B4D54  ;
-  border: 0.2rem solid #1B4D54
+  color: #71abe2  ;
+  border: 0.2rem solid #7fced8
   ;
   background: none;
   cursor: pointer;
@@ -325,13 +325,13 @@ section {
 }
 
 .banner .box .content span {
-  font-size: 1.5rem;
-  color: #D95E2B;
+  font-size: 2.5rem;
+  color: #74898b;
 }
 
 .banner .box .content h3 {
   font-size: 2rem;
-  color: #1B4D54;
+  color: #81a1a5;
   padding-top: 1rem;
 }
 
@@ -950,81 +950,120 @@ section {
 /*# sourceMappingURL=style.css.map */
 
 
-/* Contenedor para las secciones de la cuenta */
-.account-section
-.user-profile-section {
-  margin: 2rem auto;
-  padding: 2rem;
-  max-width: 1200px;
-  border: 2px solid #1B4D54;
-  border-radius: .5rem;
-  background-color: #fff;
+/* Profile Section Styles */
+.profile {
+  margin: 2rem 0;
 }
 
-/* Títulos para secciones dentro de la cuenta */
-.account-section
-.user-profile-section h2 {
+/* User Info Section */
+.profile-info {
+  flex: 1;
+  padding: 2rem;
+  border: 0.2rem solid #ddd;
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+}
+
+.profile-info h3 {
   font-size: 2.5rem;
   color: #1B4D54;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-info .box {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 0.2rem solid #ccc;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #666;
+  font-size: 1.6rem;
   text-align: center;
 }
 
-.account-section 
-.user-profile-sectionp {
-  font-size: 1.6rem;
-  color: #666;
-  line-height: 2;
-  margin-bottom: 1.5rem;
+.profile-info .btn {
+  background: #F6A05D;
+  color: #fff;
+  text-align: center;
 }
 
-/* Estilo para listas de configuraciones */
-.account-section ul {
+/* User Options Section */
+.profile-options {
+  flex: 1;
+  padding: 2rem;
+  border: 0.2rem solid #ddd;
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+}
+
+.profile-options h3 {
+  font-size: 2.5rem;
+  color: #1B4D54;
+  margin-bottom: 1rem;
+}
+
+.profile-options ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.account-section ul li {
-  padding: 1rem 0;
-  font-size: 1.7rem;
-  color: #333;
-  border-bottom: 1px solid #ddd;
+.profile-options ul li {
+  margin: 1rem 0;
 }
 
-.account-section ul li a {
+.profile-options ul li a {
   color: #1B4D54;
-  text-decoration: none;
-}
-
-.account-section ul li a:hover {
-  color: #D95E2B;
-}
-/* Botones para la página de cuenta */
-.btn-account {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin-top: 1rem;
   font-size: 1.6rem;
-  color: #1B4D54;
-  border: 2px solid #1B4D54;
-  border-radius: .5rem;
-  background: none;
-  cursor: pointer;
-  text-transform: uppercase;
 }
 
-.btn-account:hover {
-  background-color: #1B4D54;
-  color: #fff;
+.profile-options ul li a:hover {
+  color: #F6A05D;
 }
 
-.btn-danger {
-  background-color: #D95E2B;
-  color: #fff;
-  border: none;
+/* Orders Section */
+.orders {
+  margin-top: 3rem;
 }
 
-.btn-danger:hover {
-  background-color: #F6A05D;
+.orders .title {
+  text-align: center;
+  margin-bottom: 2rem;
 }
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th, 
+.order-table td {
+  border: 0.2rem solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.order-table th {
+  background: #F6A05D;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.order-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.order-table tr:hover {
+  background-color: #e8f0fe;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile .row {
+      flex-direction: column;
+  }
+
+  .profile-info, .profile-options {
+      margin-bottom: 2rem;
+  }
+}
+
