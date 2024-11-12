@@ -7,7 +7,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const confirmPassword = document.querySelector('input[name="confirmPassword"]').value.trim(); // Campo de confirmación de contraseña
     const userType = document.getElementById('user-type').value;
     const username = document.querySelector('input[name="username"]').value.trim(); // Nombre de usuario
-
+    
     // Validar que todos los campos estén completos
     if (!email || !password || !confirmPassword || !userType || !username) {
         alert('Por favor, completa todos los campos.');

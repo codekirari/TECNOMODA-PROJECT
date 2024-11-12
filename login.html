@@ -64,6 +64,15 @@
             <span class="fas fa-lock"></span>
             <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
         </div>
+        <div class="inputBox">
+            <label for="user-type">Tipo de usuario:</label>
+            <select id="user-type" name="userType" required>
+                <option value="" disabled selected>Selecciona tu tipo de usuario</option>
+                <option value="user">Usuario</option>
+                <option value="seller">Vendedor</option>
+                <option value="admin">Administrador</option>
+            </select>
+        </div>
         <input type="submit" value="Iniciar sesión" class="btn">
         <div class="flex">
             <input type="checkbox" name="remember" id="remember-me">
@@ -73,7 +82,6 @@
         <a href="register.html" class="btn">Crear cuenta</a>
     </form>
 </section>
-
 <!-- Login form section ends -->
 
 <!-- footer section starts  -->
