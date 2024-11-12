@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="images/logo/logo-no-background.png" alt="Logo" style="height: 50px;">
+    </a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalog.html">Catálogo</a></li>
+            <li><a href="about.html">¿Quiénes somos?</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+            <li><a href="#">Cuenta</a>
+                <ul>
+                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li><a href="register.html">Registro</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+    </div>
+    <form action="" class="search-form">
+        <input type="search" placeholder="Buscar aquí..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
+
+<section class="heading">
+    <h1>Perfil de Usuario</h1>
+    <p><a href="index.html">Inicio</a> >> Perfil</p>
+</section>
+
+<!-- Sección de perfil general -->
+<section class="profile">
+    <h1 class="title">Mi Perfil</h1>
+    <div class="row">
+        <div class="profile-info">
+            <h3>Información Personal</h3>
+            <form action="#">
+                <input type="text" value="Nombre del Usuario" class="box" disabled>
+                <input type="email" value="correo@ejemplo.com" class="box" disabled>
+                <input type="number" value="1234567890" class="box" disabled>
+                <a href="#" class="btn">Editar Información</a>
+            </form>
+        </div>
+
+        <!-- Opciones para Clientes -->
+        <div class="profile-options">
+            <h3>Opciones</h3>
+
+            <div class="client-options">
+                
+                <button class="collapsible">Historial de Pedidos <i class="fas fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Ver historial de pedidos realizados.</p>
+                </div>
+
+                <button class="collapsible">Métodos de Pago <i class="fas fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Gestionar métodos de pago guardados.</p>
+                </div>
+
+                <button class="collapsible">Direcciones de Envío <i class="fas fa-angle-down"></i></button>
+                <div class="content">
+                    <p>Administrar direcciones de envío.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Últimos pedidos para clientes -->
+<div class="orders">
+    <h1 class="title">Últimos Pedidos</h1>
+    <table class="order-table">
+        <tr>
+            <th>Número de Pedido</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>#12345</td>
+            <td>01/10/2024</td>
+            <td>Entregado</td>
+            <td>$100.00</td>
+        </tr>
+        <tr>
+            <td>#12346</td>
+            <td>15/10/2024</td>
+            <td>En Proceso</td>
+            <td>$200.00</td>
+        </tr>
+    </table>
+    <a href="#" class="btn">Ver Todos los Pedidos</a>
+</div>
+
+<!-- footer section starts -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Enlaces Rápidos</h3>
+            <a href="index.html"><i class="fas fa-angle-right"></i> Inicio</a>
+            <a href="catalog.html"><i class="fas fa-angle-right"></i> Catálogo</a>
+            <a href="about.html"><i class="fas fa-angle-right"></i> ¿Quiénes somos?</a>
+            <a href="login.html"><i class="fas fa-angle-right"></i> Iniciar sesión</a>
+            <a href="register.html"><i class="fas fa-angle-right"></i> Registrarse</a>
+            <a href="cart.html"><i class="fas fa-angle-right"></i> Carrito</a>
+        </div>
+
+        <div class="box">
+            <h3>Opciones Adicionales</h3>
+            <a href="#"><i class="fas fa-angle-right"></i> Mi Cuenta</a>
+            <a href="#"><i class="fas fa-angle-right"></i> Mis Órdenes</a>
+            <a href="#"><i class="fas fa-angle-right"></i> Términos de Uso</a>
+            <a href="#"><i class="fas fa-angle-right"></i> Política de Privacidad</a>
+        </div>
+
+        <div class="box">
+            <h3>Síguenos</h3>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>Suscríbete para recibir información</p>
+            <form action="">
+                <input type="email" placeholder="Ingresa tu correo electrónico">
+                <input type="submit" value="Suscribirse" class="btn">
+            </form>
+        </div>
+    </div>
+
+    <div class="credit">Sena Proyecto <span>2024</span> | TECNOMODA</div>
+</section>
+<!-- footer section ends -->
+
+<script src="js/header.js"></script>
+
+<script>
+    // JavaScript para funcionalidad de los elementos colapsables
+    document.addEventListener("DOMContentLoaded", function() {
+        const collabs = document.querySelectorAll(".collapsible");
+        collabs.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

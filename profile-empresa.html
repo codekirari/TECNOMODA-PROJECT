@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Empresa - Gestión de Catálogo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="images/logo/logo-no-background.png" alt="Logo" style="height: 50px;">
+    </a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalog.html">Catálogo</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="heading">
+    <h1>Perfil de Empresa</h1>
+    <p><a href="index.html">Inicio</a> >> Perfil de Empresa</p>
+</section>
+
+<section class="profile">
+    <h1 class="title">Perfil y Catálogo empresa</h1>
+
+    <!-- Información de la Empresa -->
+    <div class="profile-info">
+        <h3>Información de la Empresa</h3>
+        <form action="#">
+            <input type="text" value="Nombre de la Empresa" class="box" disabled>
+            <input type="email" value="correo@empresa.com" class="box" disabled>
+            <input type="text" value="1234567890" class="box" disabled>
+            <textarea class="box" rows="3" disabled>Descripción de la empresa o productos.</textarea>
+            <a href="#" class="btn">Editar Información</a>
+        </form>
+    </div>
+
+    <!-- Gestión del Catálogo -->
+    <div class="catalog-management">
+        <h3>Gestión del Catálogo de Productos</h3>
+
+        <!-- Botón para añadir nuevo producto -->
+        <a href="#" class="btn add-product-btn">Añadir Nuevo Producto</a>
+
+        <!-- Lista de productos -->
+        <div class="product-list">
+            <!-- Ejemplo de tarjeta de producto -->
+            <div class="product-card">
+                <img src="images/products/uniform1.jpg" alt="Producto 1">
+                <h2>Chaqueta</h2>
+                <p>Precio: $80.000.00</p>
+                <div class="product-actions">
+                    <a href="#" class="btn">Editar</a>
+                    <a href="#" class="btn delete">Eliminar</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/uniform2.jpg" alt="Producto 2">
+                <h2>Camisa tipo polo</h2>
+                <p>Precio: $80.000.00</p>
+                <div class="product-actions">
+                    <a href="#" class="btn">Editar</a>
+                    <a href="#" class="btn delete">Eliminar</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/products/uniform3.jpg" alt="Producto 3">
+                <h2>Jean azul oscuro</h2>
+                <p>Precio: $80.000.00</p>
+                <div class="product-actions">
+                    <a href="#" class="btn">Editar</a>
+                    <a href="#" class="btn delete">Eliminar</a>
+                </div>
+            </div>
+            <!-- Agregar más tarjetas de productos según el catálogo del proveedor -->
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Enlaces Rápidos</h3>
+            <a href="index.html"><i class="fas fa-angle-right"></i> Inicio</a>
+            <a href="catalog.html"><i class="fas fa-angle-right"></i> Catálogo</a>
+            <a href="about.html"><i class="fas fa-angle-right"></i> ¿Quiénes somos?</a>
+            <a href="login.html"><i class="fas fa-angle-right"></i> Iniciar sesión</a>
+        </div>
+
+        <div class="box">
+            <h3>Síguenos</h3>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+    </div>
+
+    <div class="credit">Proyecto <span>2024</span> | TECNOMODA</div>
+</section>
+
+</body>
+</html>
