@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Font awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" href="/css/style.css"> <!-- Asegúrate de que la ruta esté bien configurada -->
+
+    <!-- Custom JS file link for login functionality -->
+    <script src="/js/login.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Header section starts -->
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="/images/logo/logo-no-background.png" alt="Logo" style="height: 50px;">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/catalog">Catálogo</a></li>
+                <li><a href="/sellers">Proveedores</a></li>
+                <li><a href="/about">¿Quiénes somos?</a></li>
+                <li><a href="/profile">Perfil</a></li>
+                <li><a href="#">Cuenta</a>
+                    <ul>
+                        <li><a href="/login">Iniciar sesión</a></li>
+                        <li><a href="/register">Registro</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="/cart" class="fas fa-shopping-cart"></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="Buscar aquí..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </header>
+    <!-- Header section ends -->
+
+    <!-- Login form section starts --> 
+    <section class="login-form">
+        <form action="/auth" method="POST" id="loginForm">
+            <!-- atributo action del formulario para que envíe la solicitud a la ruta adecuada (/auth en lugar de /login, como está ahora). Además, también necesitas añadir un campo de "tipo de usuario" si es relevante para tu lógica de negocio (como en el frontend). -->
+            <h3>Cuenta</h3>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-lock"></span>
+                <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <input type="submit" value="Iniciar sesión" class="btn">
+            <div class="flex">
+                <input type="checkbox" name="remember" id="remember-me">
+                <label for="remember-me">Recordar</label>
+                <a href="#">¿Olvidaste la contraseña?</a>
+            </div>
+            <a href="/register" class="btn">Crear cuenta</a>
+        </form>
+    </section>
+    
+    <!-- Login form section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>links</h3>
+                <a href="/"> <i class="fas fa-angle-right"></i> Inicio</a>
+                <a href="/catalog"> <i class="fas fa-angle-right"></i> Catálogo</a>
+                <a href="/about"> <i class="fas fa-angle-right"></i> quiénes somos</a>
+                <a href="/login"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
+                <a href="/register"> <i class="fas fa-angle-right"></i> Registrarse</a>
+                <a href="/cart"> <i class="fas fa-angle-right"></i> Carrito</a>
+            </div>
+
+            <div class="box">
+                <h3>links adicionales</h3>
+                <a href="#"> <i class="fas fa-angle-right"></i> Mi cuenta</a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Mi orden </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Política de provacidad </a>
+            </div>
+
+            <div class="box">
+                <h3>Síguenos</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>Suscribete para recibir información</p>
+                <form action="">
+                    <input type="email" placeholder="ingresa tu correo electrónico">
+                    <input type="submit" value="Suscribete" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="credit"> Sena Proyecto <span>2024</span> | TECNOMODA </div>
+
+    </section>
+
+    <!-- footer section ends -->
+    <script src="/js/header.js"></script>
+
+</body>
+
+</html>
+
