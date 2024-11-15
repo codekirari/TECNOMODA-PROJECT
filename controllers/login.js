@@ -22,10 +22,10 @@ function login(req, res) {
                 if (contrasenaValida) {
                     res.send({ mensaje: 'Sesion iniciada' });
                 } else {
-                    res.send({ mensaje: 'Contraseña incorrecta' });
+                    res.send({ mensaje: 'Contraseña incorrecta' }, 400);
                 }
             } else {
-                res.send({ mensaje: 'Verifique sus credenciales' });
+                res.send({ mensaje: 'Verifique sus credenciales' }, 400);
             }
         })
         .catch((error) => {

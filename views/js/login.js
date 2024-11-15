@@ -15,18 +15,29 @@ formularioLogin.addEventListener("submit", (event) => {
         },
     })
         .then((response) => {
+            // si la respuesta no es correcta, se lanza un error
             if (!response.ok) {
-                throw new Error("Error en la peticion. Mira la consola");
-              }
-            return response.json();
-        })
-        .then((data) => {
-            if (data.mensaje === 'Sesion iniciada') {
-                window.location.href = '/index.html';
-                localStorage.setItem('correo', correo);
+                // usamos then para leer el mensaje de error
+                // debido a que response.json() retorna una promesa
+                return response.json().then((data) => {
+                    throw new Error(data.mensaje);
+                });
             }
+            return response.json().then((data) => {
+                if (data.mensaje === 'Sesion iniciada') {
+                    window.location.href = '/index.html';
+                    localStorage.setItem('correo', correo);
+                }
+            });
         })
         .catch((error) => {
-            miRespuesta.innerHTML = `<h2>${error}</h2>`;
+            // si hay un error, se muestra en el div resultado
+            miRespuesta.innerHTML = '';
+            const errorDiv = document.createElement('div');
+            errorDiv.classList.add('box-error-container');
+            errorDiv.innerHTML = `
+                <span>${error}</span>
+            `;
+            miRespuesta.appendChild(errorDiv);
         });
 });

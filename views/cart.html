@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,78 +15,84 @@
     <link rel="stylesheet" href="css/cart.css">
 
     <!-- custom js file link  -->
-    <script src="js/script.js" defer></script>
+    <script src="./js/global.js" defer></script>
 
 </head>
+
 <body>
 
-<!-- header section starts  -->
+    <!-- header section starts  -->
 
-<header class="header">
-    <a href="index.html" class="logo">
-        <img src="images/logo/logo-no-background.png" alt="Logo" style="height: 50px;">
-    </a>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="catalog.html">Catálogo</a></li>
-            <li><a href="sellers.html">Proveedores</a></li>
-            <li><a href="about.html">¿Quiénes somos?</a></li>
-            <li><a href="profile.html">Perfil</a></li>
-            <li><a href="#">Cuenta</a>
-                <ul>
-                    <li><a href="login.html">Iniciar sesión</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="images/logo/logo-no-background.png" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="sellers.html">Proveedores</a></li>
+                <li><a href="about.html">¿Quiénes somos?</a></li>
+                <li id="sin-sesion"><a href="#">Cuenta</a>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="register.html">Registro</a></li>
+                    </ul>
+                </li>
+                <li id="con-sesion">
+                    <a id="correo-mostrar" href="#">Cuenta</a>
+                    <ul>
+                        <li><a href="profile.html">Perfil</a></li>
+                        <li><a href="login.html" id="cerrar-sesion">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
 
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
-    </div>
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
 
-    <form action="" class="search-form">
-        <input type="search" name="" placeholder="search here..." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
+    </header>
 
-</header>
+    <!-- header section ends -->
 
-<!-- header section ends -->
+    <!-- header section  -->
 
-<!-- header section  -->
+    <section class="heading">
+        <h1>Carrito de compras</h1>
+        <p> <a href="home.html">home</a> >> cart </p>
+    </section>
 
-<section class="heading">
-    <h1>Carrito de compras</h1>
-    <p> <a href="home.html">home</a> >> cart </p>
-</section>
+    <!-- header section -->
 
-<!-- header section -->
-
-<!-- cart section starts  -->
-<section class="shopping-cart">
-    <h1 class="title"> your products </h1>
-    <div class="box-container">
-        <div class="row">
-            <!-- Elementos generados a partir del JSON -->
-            <div id="items" class="col-sm-8 row"></div>
-            <!-- Carrito -->
-            <div class="col-sm-5">
-                <h2>Carrito</h2>
-                <!-- Elementos del carrito -->
-                <ul id="carrito" class="list-group"></ul>
-                <!-- Precio total -->
-                <p class="text-right">Total: <span id="total"></span> COP</p>
-                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+    <!-- cart section starts  -->
+    <section class="shopping-cart">
+        <h1 class="title"> your products </h1>
+        <div class="box-container">
+            <div class="row">
+                <!-- Elementos generados a partir del JSON -->
+                <div id="items" class="col-sm-8 row"></div>
+                <!-- Carrito -->
+                <div class="col-sm-5">
+                    <h2>Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: <span id="total"></span> COP</p>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- cart section end -->
+    <!-- cart section end -->
     <!-- footer section starts  -->
 
     <section class="footer">
@@ -111,7 +118,7 @@
                 <a href="#"> <i class="fas fa-angle-right"></i> Política de provacidad </a>
             </div>
 
-    
+
 
             <div class="box">
                 <h3>Síguenos</h3>
@@ -153,13 +160,13 @@
             </form>
         </div>
 
-    </div>
+        </div>
 
-    <div class="credit"> Sena Proyecto <span>2024</span> | TECNOMODA </div>
+        <div class="credit"> Sena Proyecto <span>2024</span> | TECNOMODA </div>
 
-</section>
+    </section>
 
-<!-- footer section ends -->
+    <!-- footer section ends -->
 
 
     <!-- Código JavaScript para verificar sesión -->
@@ -176,14 +183,15 @@
                 console.log("Usuario autenticado");
             }
         }
-    
+
         // Llama a la función de verificación al cargar la página
         window.onload = checkSession;
     </script>
-    
+
     <script src="js/header.js"></script>
     <script src="js/cart.js" defer></script>
 
 
 </body>
+
 </html>

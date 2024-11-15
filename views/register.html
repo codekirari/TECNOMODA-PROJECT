@@ -21,7 +21,7 @@
 <!-- header section starts  -->
 <header class="header">
     <a href="index.html" class="logo">
-        <img src="../vista/images/logo/logo-no-background.png" alt="Logo" style="height: 50px;">
+        <img src="images/logo/logo-no-background.png" alt="Logo">
     </a>
     <nav class="navbar">
         <ul>
@@ -61,10 +61,6 @@
             <input type="text" name="username" placeholder="Nombre completo" required>
         </div>
         <div class="inputBox">
-            <span class="fas fa-user"></span>
-            <input type="text" name="cedula" placeholder="Numero de Documento" required>
-        </div>
-        <div class="inputBox">
             <span class="fas fa-envelope"></span>
             <input type="email" name="email" placeholder="Correo electrónico" required>
         </div>
@@ -79,7 +75,9 @@
         
         <input type="submit" value="Registrar" class="btn">
 
-        <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+        <div class="box" id="resultado"></div>
+
+        <p id="tienes-cuenta">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
     </form>
 </section>
 
@@ -102,10 +100,6 @@
             <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
             <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
             <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
-        </div>
-
-        <div class="box" id="resultado">
-
         </div>
 
         <div class="box">

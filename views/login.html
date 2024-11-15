@@ -23,7 +23,7 @@
     <!-- Header section starts -->
     <header class="header">
         <a href="/" class="logo">
-            <img src="/images/logo/logo-no-background.png" alt="Logo" style="height: 50px;">
+            <img src="images/logo/logo-no-background.png" alt="Logo">
         </a>
         <nav class="navbar">
             <ul>
@@ -44,7 +44,7 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="/cart" class="fas fa-shopping-cart"></a>
+            <a href="/cart.html" class="fas fa-shopping-cart"></a>
         </div>
 
         <form action="" class="search-form">
@@ -54,7 +54,7 @@
     </header>
     <!-- Header section ends -->
 
-    <!-- Login form section starts --> 
+    <!-- Login form section starts -->
     <section class="login-form">
         <form id="loginForm">
             <!-- atributo action del formulario para que envíe la solicitud a la ruta adecuada (/auth en lugar de /login, como está ahora). Además, también necesitas añadir un campo de "tipo de usuario" si es relevante para tu lógica de negocio (como en el frontend). -->
@@ -68,17 +68,17 @@
                 <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
             </div>
             <input type="submit" value="Iniciar sesión" class="btn">
-            <div class="flex">
+            <!-- <div class="flex">
                 <input type="checkbox" name="remember" id="remember-me">
                 <label for="remember-me">Recordar</label>
                 <a href="#">¿Olvidaste la contraseña?</a>
-            </div>
+            </div> -->
             <a href="/register.html" class="btn">Crear cuenta</a>
+            <div id="resultado"></div>
         </form>
 
-        <div class="box" id="resultado"></div>
     </section>
-    
+
     <!-- Login form section ends -->
 
     <!-- footer section starts  -->
@@ -131,4 +131,3 @@
 </body>
 
 </html>
-

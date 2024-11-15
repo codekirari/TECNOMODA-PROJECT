@@ -14,14 +14,17 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Custom JS File Link -->
-    <script src="js/script.js" defer></script>
+    <script src="./js/global.js" defer></script>
+
 </head>
 
 <body>
-    <!-- Header Section Starts -->
+
+    <!-- header section starts  -->
+
     <header class="header">
-        <a href="index.html" class="logo">
-            <img src="../vista/images/logo/logo-no-background.png" alt="Logo" style="height: 50px;">
+        <a href="/" class="logo">
+            <img src="images/logo/logo-no-background.png" alt="Logo">
         </a>
         <nav class="navbar">
             <ul>
@@ -29,11 +32,17 @@
                 <li><a href="catalog.html">Catálogo</a></li>
                 <li><a href="sellers.html">Proveedores</a></li>
                 <li><a href="about.html">¿Quiénes somos?</a></li>
-                <li><a href="profile.html">Perfil</a></li>
-                <li><a href="#">Cuenta</a>
+                <li id="sin-sesion"><a href="#">Cuenta</a>
                     <ul>
                         <li><a href="login.html">Iniciar sesión</a></li>
                         <li><a href="register.html">Registro</a></li>
+                    </ul>
+                </li>
+                <li id="con-sesion">
+                    <a id="correo-mostrar" href="#">Cuenta</a>
+                    <ul>
+                        <li><a href="profile.html">Perfil</a></li>
+                        <li><a href="login.html" id="cerrar-sesion">Cerrar sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -83,7 +92,7 @@
     <!-- Banner Section Starts -->
     <section class="banner">
         <div class="box">
-            <img src="../vista/images/chaquetas/chaquetatela.jpg" alt="">
+            <img src="./images/chaquetas/chaquetatela.jpg" alt="">
             <div class="content">
                 <span>Chaquetas</span>
                 <h3>Disponibilidad inmediata</h3>
@@ -91,7 +100,7 @@
             </div>
         </div>
         <div class="box">
-            <img src="../vista/images/jeans/jean.jpeg" alt="">
+            <img src="./images/jeans/jean.jpeg" alt="">
             <div class="content">
                 <span>Jeans</span>
                 <h3>Disponibilidad inmediata</h3>
@@ -100,7 +109,7 @@
         </div>
 
         <div class="box">
-            <img src="../vista/images/polo/camisapolotela.jpg" alt="">
+            <img src="./images/polo/camisapolotela.jpg" alt="">
             <div class="content">
                 <span>Camisas tipo polo</span>
                 <h3>Disponibilidad inmediata</h3>
@@ -125,7 +134,8 @@
 
             <div class="box">
                 <h3>links adicionales</h3>
-                <a href="#" id="my-account-link-footer"> <i class="fas fa-angle-right"></i> Mi cuenta</a> <!-- Cambiar a la lógica en JS -->
+                <a href="#" id="my-account-link-footer"> <i class="fas fa-angle-right"></i> Mi cuenta</a>
+                <!-- Cambiar a la lógica en JS -->
                 <a href="#"> <i class="fas fa-angle-right"></i> Mi orden </a>
                 <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso </a>
                 <a href="#"> <i class="fas fa-angle-right"></i> Política de privacidad </a>
@@ -153,7 +163,7 @@
     <script>
         // Comprobar si el usuario está autenticado
         const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-        
+
         // Manejo del menú de cuenta
         const loginLink = document.getElementById('login-link');
         const logoutLink = document.getElementById('logout');
