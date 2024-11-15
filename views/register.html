@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- custom js file link  -->
-    <script src="js/register.js" defer></script>
+    <script src="./js/register.js" defer></script>
 
 </head>
 <body>
@@ -58,7 +58,11 @@
         <h3>Registro</h3>
         <div class="inputBox">
             <span class="fas fa-user"></span>
-            <input type="text" name="username" placeholder="Nombre de usuario" required>
+            <input type="text" name="username" placeholder="Nombre completo" required>
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" name="cedula" placeholder="Numero de Documento" required>
         </div>
         <div class="inputBox">
             <span class="fas fa-envelope"></span>
@@ -98,6 +102,10 @@
             <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
             <a href="register.html"> <i class="fas fa-angle-right"></i> Registrarse</a>
             <a href="cart.html"> <i class="fas fa-angle-right"></i> Carrito</a>
+        </div>
+
+        <div class="box" id="resultado">
+
         </div>
 
         <div class="box">

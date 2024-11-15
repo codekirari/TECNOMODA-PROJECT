@@ -1,39 +1,34 @@
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    const email = document.querySelector('input[name="email"]').value.trim();
-    const password = document.querySelector('input[name="password"]').value.trim();
-    const confirmPassword = document.querySelector('input[name="confirmPassword"]').value.trim();
-    const userType = document.getElementById('user-type').value;
-    const username = document.querySelector('input[name="username"]').value.trim();
+const bcrypt = require('bcrypt');
+const { ejecutarQuerySQL } = require("../database/conectar");
 
-    // Validaciones
-    if (!email || !password || !confirmPassword || !userType || !username) {
-        alert('Por favor, completa todos los campos.');
-        return;
-    }
-
-    if (password !== confirmPassword) {
-        alert('Las contraseñas no coinciden.');
-        return;
-    }
-
-    fetch('http://localhost:30 00/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre: username, correo: email, contrasena: password })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.mensaje === 'Usuario registrado exitosamente') {
-            alert('Registro exitoso. Ahora puedes iniciar sesión.');
-            window.location.href = 'login.html';
-        } else {
-            alert(data.mensaje);  // Mostrar el mensaje del servidor
+function registrarUsuario(req, res) {
+    if (req.body) {
+        if (!req.body.correo && !req.body.correo.includes('@')) {
+            res.send({ mensaje: 'Email invalido'}, 400);
+            // Si el email no es valido, no se ejecuta la consulta SQL
+            return;
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Hubo un error al registrar el usuario.');
-    });
-});
+    }
+    // Consulta SQL
+    const { nombre, correo, contrasenia } = req.body;
+    // encripta usando bcrypt, usando hashSync y 10 rondas de encriptacion
+    const contrasenaEncriptada = bcrypt.hashSync(contrasenia, 10);
+
+    const sql = `
+        INSERT INTO usuario (Nombre, Email, contrasenia)
+        VALUES ('${nombre}', '${correo}', '${contrasenaEncriptada}')
+    `;
+    // Ejecuta la consulta SQL y enviamos res para que maneje la respuesta del endpoint
+    ejecutarQuerySQL(sql)
+        .then((resultado) => {
+            res.send({ mensaje: 'Usuario registrado' }, 200);
+        })
+        .catch((error) => {
+            res.send({ mensaje: error }, 500);
+        });
+}
+
+module.exports = {
+    registrarUsuario
+};

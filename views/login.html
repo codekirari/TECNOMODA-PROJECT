@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/style.css"> <!-- Asegúrate de que la ruta esté bien configurada -->
 
     <!-- Custom JS file link for login functionality -->
-    <script src="/js/login.js" defer></script>
+    <script src="./js/login.js" defer></script>
 
 </head>
 
@@ -27,15 +27,15 @@
         </a>
         <nav class="navbar">
             <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/catalog">Catálogo</a></li>
-                <li><a href="/sellers">Proveedores</a></li>
-                <li><a href="/about">¿Quiénes somos?</a></li>
-                <li><a href="/profile">Perfil</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="sellers.html">Proveedores</a></li>
+                <li><a href="about.html">¿Quiénes somos?</a></li>
+                <li><a href="profile.html">Perfil</a></li>
                 <li><a href="#">Cuenta</a>
                     <ul>
-                        <li><a href="/login">Iniciar sesión</a></li>
-                        <li><a href="/register">Registro</a></li>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="register.html">Registro</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,7 +56,7 @@
 
     <!-- Login form section starts --> 
     <section class="login-form">
-        <form action="/auth" method="POST" id="loginForm">
+        <form id="loginForm">
             <!-- atributo action del formulario para que envíe la solicitud a la ruta adecuada (/auth en lugar de /login, como está ahora). Además, también necesitas añadir un campo de "tipo de usuario" si es relevante para tu lógica de negocio (como en el frontend). -->
             <h3>Cuenta</h3>
             <div class="inputBox">
@@ -73,8 +73,10 @@
                 <label for="remember-me">Recordar</label>
                 <a href="#">¿Olvidaste la contraseña?</a>
             </div>
-            <a href="/register" class="btn">Crear cuenta</a>
+            <a href="/register.html" class="btn">Crear cuenta</a>
         </form>
+
+        <div class="box" id="resultado"></div>
     </section>
     
     <!-- Login form section ends -->

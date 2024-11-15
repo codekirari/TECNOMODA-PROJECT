@@ -28,10 +28,10 @@ DROP PROCEDURE IF EXISTS ObtenerProductosPorEmpresa;
 
 -- Crear tablas 
 CREATE TABLE usuario (
-    id_usuario INT NOT NULL PRIMARY KEY,
+    id_usuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     Nombre VARCHAR(200) NOT NULL,
     Email VARCHAR(100) NOT NULL UNIQUE, 
-    contrasenia VARCHAR(50) NOT NULL,
+    contrasenia VARCHAR(512) NOT NULL,
     Celular VARCHAR(50),
     Direccion VARCHAR(255),
     Programa VARCHAR(100),

@@ -11,13 +11,20 @@ const db = mysql.createConnection({
 // Promesa para ejecutar la consulta SQL
 function ejecutarQuerySQL(query) {
     return new Promise((resolve, reject) => {
+        // Conectar a la base de datos
+        db.connect();
+        // Ejecutar la consulta
         db.query(query, (error, results) => {
+            console.log('🐞', error);
+            console.log('🦗', results);
             if (error) {
                 reject(error);
             } else {
                 resolve(results);
             }
         });
+        // Cerrar la conexión
+        db.end();
     });
 }
 
