@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+
+    <!-- Vincular iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Vincular archivo de estilos CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Vincular archivo de JavaScript -->
+    <script src="./js/global.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="images/logo/logo-no-background.png" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="sellers.html">Proveedores</a></li>
+                <li><a href="about.html">¿Quiénes somos?</a></li>
+                <li id="sin-sesion"><a href="#">Cuenta</a>
+                    <ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                        <li><a href="register.html">Registro</a></li>
+                    </ul>
+                </li>
+                <li id="con-sesion">
+                    <a id="correo-mostrar" href="#">Cuenta</a>
+                    <ul>
+                        <li><a href="profile.html">Perfil</a></li>
+                        <li><a href="login.html" id="cerrar-sesion">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="Buscar aquí..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </header>
+
+    <!-- Sección de encabezado del catálogo -->
+    <section class="heading">
+        <h1>Nuestro catálogo</h1>
+        <p> <a href="index.html">Inicio</a> >> Catálogo </p>
+    </section>
+
+    <!-- Sección de catálogos destacados -->
+    <section class="catalog">
+        <h1 class="title"> Productos destacados </h1>
+
+        <!-- Filtros de categoría y proveedor -->
+        <div class="filters">
+            <h3>Filtrar por categoría:</h3>
+            <select id="category-filter">
+                <option value="all">Todos</option>
+                <option value="chaquetas">Chaquetas</option>
+                <option value="jeans">Jeans</option>
+                <option value="camisa-polo">Camisas tipo Polo</option>
+                <option value="tennis">Tennis</option>
+            </select>
+
+            <h3>Filtrar por proveedor:</h3>
+            <select id="supplier-filter">
+                <option value="all">Todos</option>
+                <option value="tienda1">Tienda 1</option>
+                <option value="tienda2">Tienda 2</option>
+                <option value="tienda3">Tienda 3</option>
+                <option value="tienda4">Tienda 4</option>
+            </select>
+        </div>
+
+        <!-- Contenedor de los productos -->
+        <div class="box-container">
+            <div class="box" data-category="chaquetas" data-supplier="tienda1">
+                <div class="image">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <img src="./images/chaquetas/chaqueta2.jpg" alt="Chaqueta">
+                </div>
+                <div class="content">
+                    <h3>Chaqueta</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$80.000 <span>$25.00</span></div>
+                </div>
+            </div>
+
+            <div class="box" data-category="jeans" data-supplier="tienda2">
+                <div class="image">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <img src="./images/jeans/Jean1.jpg" alt="Jeans">
+                </div>
+                <div class="content">
+                    <h3>Jeans</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">$50.000 <span>$15.00</span></div>
+                </div>
+            </div>
+
+            <div class="box" data-category="camisa-polo" data-supplier="tienda3">
+                <div class="image">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <img src="./images/polo/polo3.jpg" alt="Camisa Polo">
+                </div>
+                <div class="content">
+                    <h3>Camisa Polo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$40.000 <span>$12.00</span></div>
+                </div>
+            </div>
+
+            <div class="box" data-category="tennis" data-supplier="tienda4">
+                <div class="image">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-share"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <img src="./images/tennis/tennis1.jpg" alt="Tennis">
+                </div>
+                <div class="content">
+                    <h3>Tennis</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">$60.000 <span>$20.00</span></div>
+                </div>
+            </div>
+
+            <!-- Agregar más productos según necesidad -->
+        </div>
+    </section>
+
+    <!-- footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>links</h3>
+                <a href="index.html"> <i class="fas fa-angle-right"></i> Inicio</a>
+                <a href="catalog.html"> <i class="fas fa-angle-right"></i> Catálogo</a>
+                <a href="about.html"> <i class="fas fa-angle-right"></i> ¿Quiénes somos?</a>
+                <a href="login.html"> <i class="fas fa-angle-right"></i> Iniciar sesión</a>
+            </div>
+            <div class="box">
+                <h3>links adicionales</h3>
+                <a href="#"> <i class="fas fa-angle-right"></i> Mi orden </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Términos de uso </a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Política de privacidad </a>
+            </div>
+            <div class="box">
+                <h3>contacto</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +57 123 456 789 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +57 987 654 321 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> ejemplo@gmail.com </a>
+                <a href="#"> <i class="fas fa-map"></i> Bogotá, Colombia </a>
+            </div>
+        </div>
+        <div class="credit"> © 2024 - Todos los derechos reservados. </div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- Aquí se coloca el JavaScript -->
+    <script>
+        // Simulación de usuario conectado, cambiar a true si el usuario está conectado
+        const isLoggedIn = true; // Cambiar esto según la lógica de autenticación
+
+        // Obtener los enlaces del menú
+        const loginLink = document.getElementById('login-link');
+        const logoutLink = document.getElementById('logout');
+        const myAccountLink = document.getElementById('my-account-link');
+
+        // Actualizar la interfaz según el estado de inicio de sesión
+        if (isLoggedIn) {
+            loginLink.style.display = 'none'; // Ocultar el enlace de iniciar sesión
+            logoutLink.style.display = 'block'; // Mostrar el enlace de cerrar sesión
+            myAccountLink.style.display = 'block'; // Mostrar el enlace de mi cuenta
+        } else {
+            logoutLink.style.display = 'none'; // Ocultar el enlace de cerrar sesión
+            myAccountLink.style.display = 'none'; // Ocultar el enlace de mi cuenta
+        }
+
+        // Lógica para cerrar sesión (simulada)
+        logoutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            alert('Has cerrado sesión.');
+            // Aquí puedes agregar lógica adicional para manejar la sesión
+            window.location.href = 'index.html'; // Redirigir a la página de inicio
+        });
+    </script>
+</body>
+
+</html>
