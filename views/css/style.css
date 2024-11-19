@@ -28,6 +28,12 @@ section {
 ;
 }
 
+p, span {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 2.5;
+}
+
 .heading h1 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -37,6 +43,10 @@ section {
 .heading p {
   color: #fff;
   padding-top: .7rem;
+  font-size: 1.7rem;
+}
+
+a {
   font-size: 1.7rem;
 }
 
@@ -815,13 +825,26 @@ section {
   font-size: 1.5rem;
 }
 
-.shopping-cart .box-container .box .content form input {
-  width: 8rem;
+select {
   font-size: 1.5rem;
   color: #666;
   padding: .5rem 1rem;
   border-radius: .5rem;
   background: #eee;
+}
+
+form input {
+  font-size: 1.5rem;
+  color: #666;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  background: #eee;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .shopping-cart .box-container .box .content .price {
