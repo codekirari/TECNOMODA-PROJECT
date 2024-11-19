@@ -7,6 +7,7 @@ miFormulario.addEventListener("submit", (event) => {
   const nombre = formData.get("username");
   const correo = formData.get("email");
   const contrasenia = formData.get("password");
+  const rol = formData.get("rol");
   const verificacionContrasenia = formData.get("confirmPassword");
 
   if (contrasenia !== verificacionContrasenia) {
@@ -16,7 +17,7 @@ miFormulario.addEventListener("submit", (event) => {
   // Referencia de fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
   fetch(`/register`, {
     method: "POST",
-    body: JSON.stringify({ nombre, correo, contrasenia }),
+    body: JSON.stringify({ nombre, correo, contrasenia, rol }),
     headers: {
       "Content-Type": "application/json",
     },
@@ -36,7 +37,7 @@ miFormulario.addEventListener("submit", (event) => {
         const successDiv = document.createElement('div');
         successDiv.classList.add('box-success-container');
         successDiv.innerHTML = `
-            <span>${data.mensaje}</span>
+            <span>${data.mensaje ?? JSON.stringify(data)}</span>
             <span>Haz click <a href="/login.html">aquí</a> para iniciar sesión</span>
         `;
         // Oculta mensaje de "¿Ya tienes cuenta?" si el registro fue exitoso

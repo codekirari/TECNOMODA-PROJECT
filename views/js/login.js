@@ -27,6 +27,7 @@ formularioLogin.addEventListener("submit", (event) => {
                 if (data.mensaje === 'Sesion iniciada') {
                     window.location.href = '/index.html';
                     localStorage.setItem('correo', correo);
+                    localStorage.setItem('rol', data.rol);
                 }
             });
         })

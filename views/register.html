@@ -14,43 +14,9 @@
 
     <!-- custom js file link  -->
     <script src="./js/register.js" defer></script>
-
+    <script src="./js/global.js" defer></script>
 </head>
 <body>
-
-<!-- header section starts  -->
-<header class="header">
-    <a href="index.html" class="logo">
-        <img src="images/logo/logo-no-background.png" alt="Logo">
-    </a>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="catalog.html">Catálogo</a></li>
-            <li><a href="sellers.html">Proveedores</a></li>
-            <li><a href="about.html">¿Quiénes somos?</a></li>
-            <li><a href="profile.html">Perfil</a></li>
-            <li><a href="#">Cuenta</a>
-                <ul>
-                    <li><a href="login.html">Iniciar sesión</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
-    </div>
-
-    <form action="" class="search-form">
-        <input type="search" placeholder="search here..." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
-</header>
-<!-- header section ends -->
 
 <!-- Register form section starts -->
 <section class="register-form">
@@ -72,6 +38,11 @@
             <span class="fas fa-lock"></span>
             <input type="password" name="confirmPassword" placeholder="Confirma tu contraseña" required>
         </div>
+        <h3>¿Cual es tu rol?</h3>
+        <select name="rol">
+            <option value="usuario">Usuario</option>
+            <option value="administrador">Administrador</option>
+        </select>
         
         <input type="submit" value="Registrar" class="btn">
 

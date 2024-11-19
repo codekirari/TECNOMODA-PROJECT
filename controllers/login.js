@@ -6,7 +6,7 @@ function login(req, res) {
     const { correo, contrasenia } = req.body;
 
     const sql = `
-        SELECT contrasenia FROM usuario WHERE Email = '${correo}'
+        SELECT contrasenia, rol FROM usuario WHERE Email = '${correo}'
     `;
     // Ejecuta la consulta SQL y enviamos res para que maneje la respuesta del endpoint
     // Si la contraseña es correcta, se envia un mensaje de sesion iniciada
@@ -20,16 +20,16 @@ function login(req, res) {
                 const contrasenaEncriptada = resultado[0].contrasenia;
                 const contrasenaValida = bcrypt.compareSync(contrasenia, contrasenaEncriptada);
                 if (contrasenaValida) {
-                    res.send({ mensaje: 'Sesion iniciada' });
+                    res.send({ mensaje: 'Sesion iniciada', rol: resultado[0].rol }).status(200);
                 } else {
-                    res.send({ mensaje: 'Contraseña incorrecta' }, 400);
+                    res.send({ mensaje: 'Contraseña incorrecta' }).status(400);
                 }
             } else {
-                res.send({ mensaje: 'Verifique sus credenciales' }, 400);
+                res.send({ mensaje: 'Verifique sus credenciales' }).status(400);
             }
         })
         .catch((error) => {
-            res.send({ mensaje: error }, 500);
+            res.send({ mensaje: error }).status(500);
         });
 }
 
